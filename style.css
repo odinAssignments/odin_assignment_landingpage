@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
+
+*,
+
+/* ------------ */
+/* --RESET--*/
+/* ------------ */
+
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 80%;
+  height: auto;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--black_opac);
+}
+
+/* ------------ */
+/* --DEFAULT--*/
+/* ------------ */
+:root {
+  --orange: #ff6b00;
+  --black_opac: rgba(62, 62, 62, 0.96);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* ------------ */
+/* --GLOBAL--*/
+/* ------------ */
+.text-orange,
+.focus {
+  color: var(--orange);
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  background: var(--orange);
+  color: white;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+.btn:hover {
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.border {
+  width: 7rem;
+  max-width: 7rem;
+  height: 0.2rem;
+  border-radius: 1rem;
+  background: var(--orange);
+}
+
+/* ------------ */
+/* --CONTAINER--*/
+/* ------------ */
+.container {
+  width: 1600px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* ------------ */
+/* --NAVBAR--*/
+/* ------------ */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 4rem;
+}
+.nav_menu {
+  display: flex;
+  gap: 3rem;
+  transition: transform 0.3s ease-in-out;
+}
+.item_nav:hover {
+  font-weight: 500;
+  transform: scale(1.05);
+}
+.logo {
+  font-size: 1.8rem;
+}
+
+/* ------------ */
+/* --HEADER--*/
+/* ------------ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+  margin-top: 10rem;
+}
+.wrapper_header {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 2rem;
+}
+.title_header {
+  font-size: 3rem;
+  min-width: 65%;
+  width: 65%;
+}
+.header_img {
+  width: 15rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+/* ------------ */
+/* --MENU--*/
+/* ------------ */
+
+.wrapper_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 15rem;
+}
+
+.title_menu {
+  font-size: 2.3rem;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  flex-wrap: wrap;
+  margin-top: 13rem;
+}
+
+.container_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0px 1rem 1rem 0px rgba(0, 0, 0, 0.25);
+}
+
+.img_item {
+  position: absolute;
+  top: -13rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.title_card {
+  font-weight: bold;
+  width: 13rem;
+  font-size: 1.5rem;
+}
+.subtitle_card {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.price_card {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+/* ------------ */
+/* --ABOUT--*/
+/* ------------ */
+
+#about {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20rem;
+  gap: 18rem;
+}
+
+.title_about {
+  font-size: 2.3rem;
+  width: 40rem;
+  text-align: left;
+}
+
+.img_about {
+  width: 22rem;
+  height: auto;
+  margin-bottom: 10rem;
+}
+
+/* ------------ */
+/* --CITATION--*/
+/* ------------ */
+
+#citation {
+  margin: 15rem 7rem;
+  width: 45rem;
+}
+.citation,
+.citation2 {
+  font-style: italic;
+  font-size: 2rem;
+  text-align: start;
+}
+
+/* ------------ */
+/* --FOOTER--*/
+/* ------------ */
+
+.copyright {
+  text-align: center;
+  margin: 1rem 0;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* ------------ */
+/* --RESPONSIVE--*/
+/* ------------ */
+
+@media screen and (max-width: 1483px) {
+  /* ------------ */
+  /* --MENU--*/
+  /* ------------ */
+  .items {
+    flex-direction: row;
+    width: 100%;
+    gap: 15rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  /* ------------ */
+  /* --HEADER--*/
+  /* ------------ */
+  .title_header {
+    font-size: 2rem;
+  }
+
+  .header_img {
+    width: 12rem;
+    margin: 0;
+  }
+
+  /* ------------ */
+  /* --MENU--*/
+  /* ------------ */
+  .items {
+    flex-direction: row;
+    gap: 10rem;
+  }
+  .card {
+    margin-bottom: 5rem;
+  }
+
+  /* ------------ */
+  /* --ABOUT--*/
+  /* ------------ */
+
+  #about {
+    flex-direction: column;
+    order: 1;
+    gap: 0rem;
+  }
+
+  .title_about {
+    font-size: 2rem;
+    width: 40rem;
+    order: 2;
+    text-align: center;
+  }
+
+  .img_about {
+    margin-bottom: 1rem;
+  }
+
+  /* ------------ */
+  /* --CITATION--*/
+  /* ------------ */
+  #citation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 60%;
+    margin: 15rem auto;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  /* ------------ */
+  /* --MENU--*/
+  /* ------------ */
+  .items {
+    flex-direction: row;
+    width: 100%;
+    gap: 10rem;
+  }
+
+  .card {
+    gap: 1rem;
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .title_card {
+    font-size: 1.2rem;
+  }
+  .subtitle_card {
+    font-size: 1.2rem;
+  }
+  .price_card {
+    font-size: 1.8rem;
+  }
+
+  /* ------------ */
+  /* --ABOUT--*/
+  /* ------------ */
+  .title_about {
+    width: 30rem;
+    font-size: 1.5rem;
+  }
+
+  /* ------------ */
+  /* --CITATION--*/
+  /* ------------ */
+  .citation,
+  .citation2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  /* ------------ */
+  /* --HEADER--*/
+  /* ------------ */
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 7rem auto;
+  }
+
+  .wrapper_header {
+    text-align: center;
+    align-items: center;
+    order: 2;
+  }
+
+  .title_header {
+    font-size: 1.6rem;
+  }
+
+  .header_img {
+    width: 13rem;
+  }
+
+  /* ------------ */
+  /* --MENU--*/
+  /* ------------ */
+
+  .title_menu {
+    font-size: 2rem;
+  }
+
+  .items {
+    flex-direction: row;
+    width: 100%;
+    gap: 10rem;
+  }
+
+  .card {
+    gap: 1rem;
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .title_card {
+    font-size: 1.2rem;
+  }
+  .subtitle_card {
+    font-size: 1.2rem;
+  }
+  .price_card {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  /* ------------ */
+  /* --MENU--*/
+  /* ------------ */
+  .img_item {
+    top: -9rem;
+    width: 8rem;
+    height: auto;
+  }
+
+  .card {
+    padding: 2rem 0.5rem;
+  }
+
+  .title_card {
+    font-size: 1.2rem;
+  }
+  .subtitle_card {
+    font-size: 1rem;
+  }
+  .price_card {
+    font-size: 1.5rem;
+  }
+
+  /* ------------ */
+  /* --CITATION--*/
+  /* ------------ */
+  #citation {
+    margin: 15rem auto;
+    width: 80%;
+  }
+
+  .citation,
+  .citation2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  /* ------------ */
+  /* --MENU--*/
+  /* ------------ */
+  .items {
+    gap: 2rem;
+  }
+
+  .card {
+    padding: 2rem 0.5rem;
+    margin-bottom: 10rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  /* ------------ */
+  /* --NAVBAR--*/
+  /* ------------ */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .nav_menu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    text-align: center;
+    font-size: 1.3rem;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ------------ */
+  /* --HEADER--*/
+  /* ------------ */
+
+  .title_header {
+    font-size: 150%;
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .header_img {
+    width: 10rem;
+  }
+  .logo {
+    margin: auto;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  /* ------------ */
+  /* --ABOUT--*/
+  /* ------------ */
+  .title_about {
+    width: 90%;
+    font-size: 1.3rem;
+  }
+
+  /* ------------ */
+  /* --FOOTER--*/
+  /* ------------ */
+  .copyright {
+    margin-bottom: 5rem;
+  }
+}
